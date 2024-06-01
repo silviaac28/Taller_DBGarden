@@ -82,7 +82,7 @@ WHERE fecha_entregada > fecha_esperada;
 ```sql
 SELECT pedido_id, cliente_id, fecha_esperada, fecha_entregada 
 FROM pedido                                                          
-WHERE (fecha_esperada - fecha_entregada) >=  2;			 *  * * * * * * * **
+WHERE (fecha_esperada - fecha_entregada) >=  2;			
 ```
 
 --- Utilizando la función DATEDIFF de MySQL.
@@ -120,7 +120,7 @@ ON ped.estado_pedido_id = esp.estado_id
 WHERE esp.nombre_estado = 'Entregado'
 AND estado_id IN
 (SELECT pedi2.pedido_id FROM pedido AS pedi2
-WHERE month(pedi2.fecha_pedido) = 01); **** EJEMPLO SUBCONSULTA
+WHERE month(pedi2.fecha_pedido) = 01); 
 
 
 SELECT ped.pedido_id 
